@@ -1,0 +1,65 @@
+body {
+  background-color: #f1f0ee;
+  font-family: "Gill Sans", sans-serif;
+}
+
+:root {
+  --default-font-family: "Poppins", sans-serif;
+  --branding-color: rgba(158, 192, 255);
+  --box-shadow-rgba: rgba(0, 0, 0, 0.3);
+}
+.container-center {
+  display: block;
+  margin: 20px auto;
+  width: 700px;
+  height: 350px;
+  border: thin double;
+  border-radius: 3px;
+  padding: 10px 10px 40px 10px;
+  border-color: var(--branding-color);
+}
+
+.SearchEngine .container-display-city {
+  width: 625px;
+  margin: 20px;
+  padding: 20px;
+  border: thin double;
+  border-radius: 3px;
+  display: inline-block;
+  border-color: var(--branding-color);
+}
+
+:root {
+  --default-font-family: "Poppins", sans-serif;
+  --branding-color: rgba(158, 192, 255);
+  --box-shadow-rgba: rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"] {
+  margin: 40px 5px 20px 70px;
+  width: 45%;
+  padding: 10px 20px;
+  border: thin double;
+  border-radius: 3px;
+  border-color: var(--branding-color);
+}
+
+input[type="submit"] {
+  background: var(--branding-color);
+  color: white;
+  border: 1px solid var(--branding-color);
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px var(--box-shadow-rgba);
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: 4px;
+  margin: 20px 3px;
+  padding: 12px 10px;
+  transition: all 200ms ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background: white;
+  color: var(--branding-color);
+  cursor: pointer;
+}

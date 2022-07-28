@@ -1,0 +1,24 @@
+:root {
+  --default-font-family: "Poppins", sans-serif;
+  --branding-color: rgba(158, 192, 255);
+  --box-shadow-rgba: rgba(0, 0, 0, 0.3);
+}
+
+.container-display-weather {
+  width: 625px;
+  margin: 20px;
+  padding: 20px;
+  border: thin double;
+  border-radius: 3px;
+  display: inline-block;
+  border-color: var(--branding-color);
+}
+
+.weather-information {
+  display: flex;
+  align-items: center;
+}
+
+.weather-description {
+  text-transform: capitalize;
+}
