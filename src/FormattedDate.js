@@ -30,11 +30,11 @@ export default function FormattedDate() {
   const month = months[currentDate.getMonth()];
   const date = currentDate.getDate();
   const year = currentDate.getFullYear();
-  const hour = currentDate.getHours();
+  let hour = currentDate.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-  const minutes = currentDate.getMinutes();
+  let minutes = currentDate.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
