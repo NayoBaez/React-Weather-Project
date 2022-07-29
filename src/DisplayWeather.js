@@ -24,8 +24,9 @@ export default function DisplayWeather(props) {
           </div>
           <div className="col-3">
             {" "}
+            <p>Humidity: {props.data.humidity}%</p>{" "}
             <p>
-              Humidity: {props.data.humidity}% Wind:{" "}
+              Wind:
               {Math.round(props.data.wind)} km/h
             </p>
           </div>

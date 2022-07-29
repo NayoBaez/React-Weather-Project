@@ -4,9 +4,9 @@ import DisplayWeather from "./DisplayWeather";
 
 import "./SearchEngine.css";
 
-export default function SearchEngine() {
-  let [city, setCity] = useState("Tokyo");
-  let [weatherData, setWeatherData] = useState({ ready: false });
+export default function SearchEngine(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function GetWeatherData(response) {
     setWeatherData({
@@ -16,20 +16,19 @@ export default function SearchEngine() {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      city: response.data.name,
     });
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    searchCity();
+    search();
   }
 
   function showCity(event) {
     setCity(event.target.value);
   }
 
-  function searchCity() {
+  function search() {
     let apiKey = "21d3636317e4ed6c448afdbbc3833fb2";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -43,6 +42,7 @@ export default function SearchEngine() {
           <input
             type="text"
             placeholder="Enter Your City"
+            autoFocus="on"
             onChange={showCity}
           />
           <input type="submit" value="Search" />
@@ -56,7 +56,7 @@ export default function SearchEngine() {
       </div>
     );
   } else {
-    searchCity();
-    return <h1>Loading</h1>;
+    search();
+    return <h1>Loading...</h1>;
   }
 }

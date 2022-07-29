@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="container-wrapper">
-        <SearchEngine />
+        <SearchEngine defaultCity="Tokyo" />
         <div>
           <Forecast />
           <Footer />
