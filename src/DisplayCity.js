@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
-
 import "./DisplayCity.css";
 
 export default function DisplayCity(props) {
@@ -24,6 +24,7 @@ export default function DisplayCity(props) {
             <div className="col-3">
               {" "}
               <h1>{props.city}</h1>
+              <FormattedDate />
               <p className="weather-description">{weather.description}</p>
             </div>
             <div className="col-3">
