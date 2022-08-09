@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import DisplayTemperature from "./DisplayTemperature";
 
 import "./DisplayWeather.css";
 
@@ -19,9 +20,7 @@ export default function DisplayWeather(props) {
           <div className="col-3">
             <img src={props.data.icon} alt={props.data.description} />
           </div>
-          <div className="col-3">
-            <h2>{Math.round(props.data.temperature)}°C</h2>
-          </div>
+          <DisplayTemperature celsius={props.data.temperature} />
           <div className="col-3">
             {" "}
             <p>Humidity: {props.data.humidity}%</p>{" "}

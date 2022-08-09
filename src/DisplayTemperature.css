@@ -1,0 +1,23 @@
+:root {
+  --default-font-family: "Poppins", sans-serif;
+  --branding-color: rgba(158, 192, 255);
+  --box-shadow-rgba: rgba(0, 0, 0, 0.3);
+}
+
+.temperature {
+  font-size: 60px;
+  font-family: var(--default-font-family);
+}
+
+.unit {
+  font-size: 15px;
+  position: relative;
+  top: -28px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
