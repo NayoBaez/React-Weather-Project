@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import DisplayWeather from "./DisplayWeather";
+import Forecast from "./Forecast";
 
 import "./SearchEngine.css";
 
@@ -52,6 +53,7 @@ export default function SearchEngine(props) {
         <div className="container-center">
           <div className="container-display-city">
             <DisplayWeather data={weatherData} />
+            <Forecast coordinates={weatherData.coordinates} />
           </div>
         </div>
       </div>
