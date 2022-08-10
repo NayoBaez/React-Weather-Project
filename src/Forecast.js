@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ForecastDay from "./ForecastDay";
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -17,10 +18,14 @@ export default function Forecast(props) {
         <div className="row">
           <div className="col-2 weekday">
             <div className="Forecast-day">Sun</div>
-            <div className="Icon"></div>
+            <div className="Icon">
+              <img
+                src={`http://openweathermap.org/img/wn/${forecast[0].weather[0].icon}@2x.png`}
+              />
+            </div>
             <div className="temp">
-              <span className="temperature-max">{forecast[0].temp.max}</span>{" "}
-              <span className="temperature-min">{forecast[0].temp.min}</span>
+              <span className="temperature-max">{forecast[0].temp.max}°</span>{" "}
+              <span className="temperature-min">{forecast[0].temp.min}°</span>
             </div>
           </div>
           <div className="col-2 weekday"> Mon </div>
@@ -32,7 +37,7 @@ export default function Forecast(props) {
       </div>
     );
   } else {
-    let apiKey = "33647c77ef0a58c9d41e6aeefa25ae5c";
+    let apiKey = "bc62018103de1e194675d5c344746370";
     let units = "metric";
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;

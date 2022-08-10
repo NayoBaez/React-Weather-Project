@@ -12,6 +12,7 @@ export default function SearchEngine(props) {
   function GetWeatherData(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -31,7 +32,7 @@ export default function SearchEngine(props) {
   }
 
   function search() {
-    let apiKey = "21d3636317e4ed6c448afdbbc3833fb2";
+    let apiKey = "bc62018103de1e194675d5c344746370";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
@@ -53,9 +54,9 @@ export default function SearchEngine(props) {
         <div className="container-center">
           <div className="container-display-city">
             <DisplayWeather data={weatherData} />
-            <Forecast coordinates={weatherData.coordinates} />
           </div>
         </div>
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
