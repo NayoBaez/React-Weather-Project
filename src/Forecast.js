@@ -17,16 +17,7 @@ export default function Forecast(props) {
       <div className="container forecast">
         <div className="row">
           <div className="col-2 weekday">
-            <div className="Forecast-day">Sun</div>
-            <div className="Icon">
-              <img
-                src={`http://openweathermap.org/img/wn/${forecast[0].weather[0].icon}@2x.png`}
-              />
-            </div>
-            <div className="temp">
-              <span className="temperature-max">{forecast[0].temp.max}°</span>{" "}
-              <span className="temperature-min">{forecast[0].temp.min}°</span>
-            </div>
+            <ForecastDay data={forecast[0]} />
           </div>
           <div className="col-2 weekday"> Mon </div>
           <div className="col-2 weekday">Tue </div>
