@@ -16,14 +16,15 @@ export default function Forecast(props) {
     return (
       <div className="container forecast">
         <div className="row">
-          <div className="col-2 weekday">
-            <ForecastDay data={forecast[0]} />
-          </div>
-          <div className="col-2 weekday"> Mon </div>
-          <div className="col-2 weekday">Tue </div>
-          <div className="col-2 weekday"> Wed </div>
-          <div className="col-2 weekday">Thu</div>
-          <div className="col-2 weekday">Fri </div>
+          {forecast.map(function (dailyforecast, index) {
+            if (index < 6) {
+              return (
+                <div className="col-2 weekday" key={index}>
+                  <ForecastDay data={dailyforecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
