@@ -49,7 +49,6 @@ export default function SearchEngine(props) {
             onChange={showCity}
           />
           <input type="submit" value="Search" />
-          <input type="submit" value="Current-location" />
         </form>
         <div className="container-center">
           <div className="container-display-city">
