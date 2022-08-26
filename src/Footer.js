@@ -7,7 +7,7 @@ export default function Footer() {
       <a
         className="footer-link"
         href="https://github.com/NayoBaez/React-Weather-Project"
-        target="blank"
+        target="_blank"
       >
         Open-Source Code{" "}
       </a>

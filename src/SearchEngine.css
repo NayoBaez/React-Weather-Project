@@ -8,25 +8,17 @@ body {
   --branding-color: rgba(158, 192, 255);
   --box-shadow-rgba: rgba(0, 0, 0, 0.3);
 }
-.container-center {
-  display: block;
-  margin: 20px auto;
-  width: 700px;
-  height: 350px;
-  border: thin double;
-  border-radius: 3px;
-  padding: 10px 10px 40px 10px;
-  border-color: var(--branding-color);
-}
 
-.SearchEngine .container-display-city {
-  width: 625px;
-  margin: 20px;
-  padding: 20px;
-  border: thin double;
+.SearchEngine .panel {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba (110, 110, 0.25);
+  box-shadow: 0 8px 32px 0 rgba (0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
   border-radius: 3px;
-  display: inline-block;
-  border-color: var(--branding-color);
 }
 
 :root {

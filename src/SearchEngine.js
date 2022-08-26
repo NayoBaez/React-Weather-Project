@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import axios from "axios";
 import DisplayWeather from "./DisplayWeather";
 import Forecast from "./Forecast";
+import Photos from "./Photos";
 
 import "./SearchEngine.css";
 
 export default function SearchEngine(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  let [photos, setPhotos] = useState(null);
+
+  function handlePexelsResponse(response) {
+    console.log(response.data.photos);
+    setPhotos(response.data.photos);
+  }
 
   function GetWeatherData(response) {
     setWeatherData({
@@ -35,25 +42,30 @@ export default function SearchEngine(props) {
     let apiKey = "bc62018103de1e194675d5c344746370";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
     axios.get(apiUrl).then(GetWeatherData);
+
+    let pexelsApiKey =
+      "563492ad6f91700001000001f2ddcd4d8c2040a1a5a92d54eeab8675";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${city}&per_page=3`;
+    let header = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: header }).then(handlePexelsResponse);
   }
+
   if (weatherData.ready) {
     return (
       <div className="SearchEngine">
-        <form className="search" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter Your City"
-            autoFocus="on"
-            onChange={showCity}
-          />
-          <input type="submit" value="Search" />
-        </form>
-        <div className="container-center">
-          <div className="container-display-city">
-            <DisplayWeather data={weatherData} />
-          </div>
+        <Photos photos={photos} />
+        <div className="panel">
+          <form className="search" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Enter Your City"
+              autoFocus="on"
+              onChange={showCity}
+            />
+            <input type="submit" value="Search" />
+          </form>
+          <DisplayWeather data={weatherData} />
         </div>
         <Forecast coordinates={weatherData.coordinates} />
       </div>
