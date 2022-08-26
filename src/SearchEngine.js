@@ -54,8 +54,7 @@ export default function SearchEngine(props) {
   if (weatherData.ready) {
     return (
       <div className="SearchEngine">
-        <Photos photos={photos} />
-        <div className="panel">
+        <div className="panel1">
           <form className="search" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -67,7 +66,10 @@ export default function SearchEngine(props) {
           </form>
           <DisplayWeather data={weatherData} />
         </div>
-        <Forecast coordinates={weatherData.coordinates} />
+        <div className="panel2">
+          <Photos photos={photos} />
+          <Forecast coordinates={weatherData.coordinates} />
+        </div>
       </div>
     );
   } else {

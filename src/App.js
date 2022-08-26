@@ -9,9 +9,7 @@ function App() {
     <div className="App">
       <div className="container-wrapper">
         <SearchEngine defaultCity="Tokyo" />
-        <div>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </div>
   );
