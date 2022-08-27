@@ -18,6 +18,10 @@ body {
   color: white;
 }
 
+.SearchEngine li {
+  list-style: none;
+}
+
 input[type="text"] {
   margin: 40px 5px 20px 70px;
   width: 70%;

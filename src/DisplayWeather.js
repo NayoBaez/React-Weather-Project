@@ -32,11 +32,6 @@ export default function DisplayWeather(props) {
           <li>
             <FormattedDate />
           </li>
-          <li>Humidity: {props.data.humidity}%</li>
-          <li>
-            Wind:
-            {Math.round(props.data.wind)} km/h
-          </li>
         </ul>
       </div>
     </div>

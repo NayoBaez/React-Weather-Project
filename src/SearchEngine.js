@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import DisplayWeather from "./DisplayWeather";
+import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
+
 import Photos from "./Photos";
 
 import "./SearchEngine.css";
@@ -56,7 +58,18 @@ export default function SearchEngine(props) {
       <div className="SearchEngine">
         <div className="row">
           <div className="col-8 panel1">
-            <Photos photos={photos} />
+            <h1>
+              Weather <strong>Forecast</strong>
+            </h1>
+            <div className="row">
+              <div className="col-8">
+                <Photos photos={photos} />
+              </div>
+              <div className="col-4">
+                <WeatherDetails data={weatherData} />
+              </div>
+            </div>
+
             <Forecast coordinates={weatherData.coordinates} />
           </div>
 
@@ -68,7 +81,6 @@ export default function SearchEngine(props) {
                 autoFocus="on"
                 onChange={showCity}
               />
-              <input type="submit" value="Search" />
             </form>
             <DisplayWeather data={weatherData} />
           </div>
