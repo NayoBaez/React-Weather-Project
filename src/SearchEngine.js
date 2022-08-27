@@ -14,7 +14,6 @@ export default function SearchEngine(props) {
   let [photos, setPhotos] = useState(null);
 
   function handlePexelsResponse(response) {
-    console.log(response.data.photos);
     setPhotos(response.data.photos);
   }
 
