@@ -10,23 +10,20 @@ body {
 }
 
 .SearchEngine .panel1 {
-  background-color: white;
-  width: 40%;
-  float: right;
+  background-color: #f2f2f1;
 }
 
 .SearchEngine .panel2 {
-  background-color: rgb(236, 236, 236);
-  width: 60%;
-  float: left;
+  background-color: #100e3b;
+  color: white;
 }
 
 input[type="text"] {
   margin: 40px 5px 20px 70px;
-  width: 45%;
+  width: 70%;
   padding: 10px 20px;
   border: thin double;
-  border-radius: 3px;
+  border-radius: 10px;
   border-color: var(--branding-color);
 }
 

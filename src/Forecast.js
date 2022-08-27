@@ -30,7 +30,7 @@ export default function Forecast(props) {
       <div className="container forecast">
         <div className="row">
           {forecast.map(function (dailyforecast, index) {
-            if (index < 6) {
+            if (index < 5) {
               return (
                 <div className="col-2 weekday" key={index}>
                   <ForecastDay data={dailyforecast} />

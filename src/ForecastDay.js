@@ -1,4 +1,5 @@
 import React from "react";
+import "./ForecastDay.css";
 
 export default function ForecastDay(props) {
   function maxTemperature() {
@@ -22,10 +23,11 @@ export default function ForecastDay(props) {
   return (
     <div>
       <div className="Forecast-day">{weekDay()}</div>
-      <div className="Icon">
+      <div>
         <img
           src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
           alt="weather-icon"
+          className="icon-daily"
         />
       </div>
       <div className="temp">

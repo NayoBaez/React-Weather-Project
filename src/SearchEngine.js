@@ -46,7 +46,7 @@ export default function SearchEngine(props) {
 
     let pexelsApiKey =
       "563492ad6f91700001000001f2ddcd4d8c2040a1a5a92d54eeab8675";
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${city}&per_page=3`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${city}&per_page=1`;
     let header = { Authorization: `Bearer ${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: header }).then(handlePexelsResponse);
   }
@@ -54,21 +54,24 @@ export default function SearchEngine(props) {
   if (weatherData.ready) {
     return (
       <div className="SearchEngine">
-        <div className="panel1">
-          <form className="search" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Enter Your City"
-              autoFocus="on"
-              onChange={showCity}
-            />
-            <input type="submit" value="Search" />
-          </form>
-          <DisplayWeather data={weatherData} />
-        </div>
-        <div className="panel2">
-          <Photos photos={photos} />
-          <Forecast coordinates={weatherData.coordinates} />
+        <div className="row">
+          <div className="col-8 panel1">
+            <Photos photos={photos} />
+            <Forecast coordinates={weatherData.coordinates} />
+          </div>
+
+          <div className="col-4 panel2">
+            <form className="search" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Enter Your City"
+                autoFocus="on"
+                onChange={showCity}
+              />
+              <input type="submit" value="Search" />
+            </form>
+            <DisplayWeather data={weatherData} />
+          </div>
         </div>
       </div>
     );

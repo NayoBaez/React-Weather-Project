@@ -1,5 +1,4 @@
 body {
-  background-color: #f1f0ee;
   font-family: "Gill Sans", sans-serif;
 }
 
@@ -16,10 +15,9 @@ body {
 
 .App .container-wrapper {
   display: block;
-  margin: 30px auto;
-  padding: 30px 20 0px;
-  width: 960px;
-  height: 600px;
+  margin: 70px auto;
+  width: 1200px;
+
   border-radius: 10px;
   box-shadow: 5px 5px 10px var(--box-shadow-rgba);
   background: white;

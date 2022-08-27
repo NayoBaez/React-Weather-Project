@@ -1,1 +1,6 @@
-
+.weekday {
+  background: white;
+  border-radius: 5px;
+  margin: 0 5px 5px 0;
+  padding: 25px 0 25px 0px;
+}

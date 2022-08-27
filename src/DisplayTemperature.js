@@ -20,7 +20,7 @@ export default function DisplayTemperature(props) {
 
   if (unit === "celsius") {
     return (
-      <div className="col-3">
+      <span>
         <span className="temperature">{Math.round(props.celsius)} </span>{" "}
         <span className="unit">
           °C |{" "}
@@ -28,11 +28,11 @@ export default function DisplayTemperature(props) {
             °F
           </a>
         </span>
-      </div>
+      </span>
     );
   } else {
     return (
-      <div className="col-3">
+      <div>
         <span className="temperature">{Math.round(convertToFahrenheit())}</span>
         <span className="unit">
           {" "}
