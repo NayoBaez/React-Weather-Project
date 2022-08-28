@@ -10,25 +10,44 @@ body {
 }
 
 .SearchEngine .panel1 {
-  background-color: #f2f2f1;
+  background-color: white;
+  padding-top: 15px;
 }
 
 .SearchEngine .panel2 {
-  background-color: #100e3b;
-  color: white;
+  background-color: #f2f2f1;
+  padding-top: 15px;
 }
 
 .SearchEngine li {
   list-style: none;
 }
 
+.SearchEngine .display-weather,
+.SearchEngine .weather-details {
+  background: #cadefc;
+  border-radius: 6px;
+  margin: 20px;
+  padding: 25px 0 25px 0;
+}
+
+.SearchEngine .sunsetpanel,
+.SearchEngine .moonsetpanel {
+  background: #cadefc;
+  border-radius: 5px;
+  color: white;
+  margin: 10px;
+  padding: 40px;
+  width: 380px;
+}
+
 input[type="text"] {
-  margin: 40px 5px 20px 70px;
-  width: 70%;
+  margin: 10px;
+  width: 90%;
   padding: 10px 20px;
   border: thin double;
   border-radius: 10px;
-  border-color: var(--branding-color);
+  border-color: transparent;
 }
 
 input[type="submit"] {

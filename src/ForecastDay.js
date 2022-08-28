@@ -23,6 +23,7 @@ export default function ForecastDay(props) {
   return (
     <div>
       <div className="Forecast-day">{weekDay()}</div>
+      <hr />
       <div>
         <img
           src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}

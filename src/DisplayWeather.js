@@ -11,7 +11,9 @@ export default function DisplayWeather(props) {
         <ul>
           <li>
             {" "}
-            <h1>{props.data.city}</h1>
+            <h1>
+              {props.data.city}, {props.data.country}
+            </h1>
           </li>
 
           <li>

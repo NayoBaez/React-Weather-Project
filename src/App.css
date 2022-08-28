@@ -1,11 +1,13 @@
 body {
   font-family: "Gill Sans", sans-serif;
+  background: var(--bs-gradient);
 }
 
 :root {
   --default-font-family: "Poppins", sans-serif;
   --branding-color: rgba(158, 192, 255);
   --box-shadow-rgba: rgba(0, 0, 0, 0.3);
+  --bs-gradient: linear-gradient(0, #f7f3ff 0%, #fff 100%);
 }
 
 .App {

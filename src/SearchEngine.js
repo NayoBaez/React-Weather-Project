@@ -3,7 +3,6 @@ import axios from "axios";
 import DisplayWeather from "./DisplayWeather";
 import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
-
 import Photos from "./Photos";
 
 import "./SearchEngine.css";
@@ -18,14 +17,18 @@ export default function SearchEngine(props) {
   }
 
   function GetWeatherData(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
+      feels: response.data.main.feels_like,
+      pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
       city: response.data.name,
+      country: response.data.sys.country,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
@@ -60,16 +63,15 @@ export default function SearchEngine(props) {
             <h1>
               Weather <strong>Forecast</strong>
             </h1>
-            <div className="row">
-              <div className="col-8">
-                <Photos photos={photos} />
-              </div>
-              <div className="col-4">
-                <WeatherDetails data={weatherData} />
-              </div>
+            <div className="city-photo">
+              <Photos photos={photos} />
             </div>
 
             <Forecast coordinates={weatherData.coordinates} />
+            <div className="row ">
+              <div className="col-6 sunsetpanel"> Sunset data Here </div>
+              <div className="col-6 moonsetpanel"> Moon Data Here </div>
+            </div>
           </div>
 
           <div className="col-4 panel2">
@@ -81,7 +83,13 @@ export default function SearchEngine(props) {
                 onChange={showCity}
               />
             </form>
-            <DisplayWeather data={weatherData} />
+            <div className="display-weather">
+              <DisplayWeather data={weatherData} />
+            </div>
+
+            <div className="weather-details">
+              <WeatherDetails data={weatherData} />
+            </div>
           </div>
         </div>
       </div>
