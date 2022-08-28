@@ -3,6 +3,7 @@ import axios from "axios";
 import DisplayWeather from "./DisplayWeather";
 import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
+import FormattedDate from "./FormattedDate";
 import Photos from "./Photos";
 
 import "./SearchEngine.css";
@@ -89,6 +90,9 @@ export default function SearchEngine(props) {
 
             <div className="weather-details">
               <WeatherDetails data={weatherData} />
+            </div>
+            <div className="weather-details">
+              <FormattedDate />
             </div>
           </div>
         </div>

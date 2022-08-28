@@ -42,8 +42,11 @@ export default function FormattedDate() {
   return (
     <>
       <div>
+        <h1>
+          {hour}:{minutes} PM
+        </h1>
         <p>
-          {day} {month} {date} {year}, {hour}:{minutes}
+          {day}, {month} {date} {year}
         </p>
       </div>
     </>

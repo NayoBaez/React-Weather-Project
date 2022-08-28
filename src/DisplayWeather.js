@@ -1,5 +1,5 @@
 import React from "react";
-import FormattedDate from "./FormattedDate";
+
 import DisplayTemperature from "./DisplayTemperature";
 
 import "./DisplayWeather.css";
@@ -29,10 +29,6 @@ export default function DisplayWeather(props) {
               className="icon"
             />
             <DisplayTemperature celsius={props.data.temperature} />
-          </li>
-
-          <li>
-            <FormattedDate />
           </li>
         </ul>
       </div>
