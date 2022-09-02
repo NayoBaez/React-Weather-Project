@@ -1,4 +1,4 @@
-.weekday {
+.dailyforecast {
   border-radius: 5px;
   border: 2px solid #edebf4;
   font-weight: lighter;
@@ -6,9 +6,8 @@
   margin-bottom: 10px;
 }
 
-.weekday:hover {
-  background: #6c61f6;
-  color: white;
+.dailyforecast:hover {
+  border: 1px solid #885df1;
 }
 
 .sunsetpanel,

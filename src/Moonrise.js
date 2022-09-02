@@ -17,7 +17,7 @@ export default function Moonrise(props) {
     if (seconds < 10) {
       seconds = `0${seconds}`;
     }
-    let moonriseTime = `${hour}:${minutes}:${seconds}`;
+    let moonriseTime = `${hour}:${minutes}`;
 
     return `${moonriseTime}`;
   }
@@ -37,21 +37,23 @@ export default function Moonrise(props) {
     if (seconds < 10) {
       seconds = `0${seconds}`;
     }
-    let moonsetTime = `${hour}:${minutes}:${seconds}`;
+    let moonsetTime = `${hour}:${minutes}`;
     return `${moonsetTime}`;
   }
 
   return (
     <div className="contaner">
-      <h4>Moonrise & Moonset</h4>
       <div className="row">
-        <div className="col-6">
+        <p className="titel-moon">Moonrise & Moonset</p>
+        <div className="col-sm-6">
           {" "}
-          <i class="fa-solid fa-moon"></i> {moonrise()}
+          <i className="fa-solid fa-moon"></i>{" "}
+          <span className="moonriseTime"> {moonrise()}</span>
         </div>
-        <div className="col-6">
+        <div className="col-sm-6">
           {" "}
-          <i class="fa-regular fa-moon"></i> {moonset()}
+          <i className="fa-regular fa-moon"></i>
+          <span className="moonsetTime"> {moonset()}</span>
         </div>
       </div>
     </div>

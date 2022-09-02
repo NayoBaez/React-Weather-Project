@@ -39,11 +39,11 @@ export default function Forecast(props) {
     return (
       <div className="Forecast">
         <section>
-          <div className="row dailyforecast">
+          <div className="row ">
             {forecast.map(function (dailyforecast, index) {
               if (index < 8) {
                 return (
-                  <div className="col-sm-3 weekday" key={index}>
+                  <div className="col-sm-3 dailyforecast" key={index}>
                     <ForecastDay data={dailyforecast} />
                   </div>
                 );

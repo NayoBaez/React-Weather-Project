@@ -17,7 +17,7 @@ export default function Sunrise(props) {
     if (seconds < 10) {
       seconds = `0${seconds}`;
     }
-    let sunriseTime = `${hour}:${minutes}:${seconds}`;
+    let sunriseTime = `${hour}:${minutes}`;
     return `${sunriseTime}`;
   }
 
@@ -37,20 +37,23 @@ export default function Sunrise(props) {
     if (seconds < 10) {
       seconds = `0${seconds}`;
     }
-    let sunsetTime = `${hour}:${minutes}:${seconds}`;
+    let sunsetTime = `${hour}:${minutes}`;
     return `${sunsetTime}`;
   }
   return (
     <div className="container">
-      <h4>Sunrise & Sunset</h4>
+      <p className="titel-sun">Sunrise & Sunset</p>
+
       <div className="row">
-        <div className="col-6">
+        <div className="col-sm-6">
           {" "}
-          <i className="fa-solid fa-sun"></i> {sunrise()}
+          <i className="fa-solid fa-sun"></i>{" "}
+          <span className="sunriseTime">{sunrise()}</span>
         </div>
-        <div className="col-6">
+        <div className="col-sm-6">
           {" "}
-          <i className="fa-regular fa-sun"></i> {sunset()}
+          <i className="fa-regular fa-sun"></i>{" "}
+          <span className="sunsetTime">{sunset()}</span>
         </div>
       </div>
     </div>

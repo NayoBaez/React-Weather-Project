@@ -1,3 +1,27 @@
 .icon-daily {
-  width: 50px;
+  width: 70px;
+  margin-top: -20px;
+}
+
+.weekday {
+  font-weight: bold;
+}
+
+.description {
+  opacity: 0.7;
+}
+.temperature-max {
+  font-weight: bold;
+}
+
+.temperature-min {
+  opacity: 0.7;
+}
+
+.ForecastDay .fa-droplet {
+  color: #a2a8d3;
+}
+
+.ForecastDay .fa-wind {
+  color: #bbe4e9;
 }
