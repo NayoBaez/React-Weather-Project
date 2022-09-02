@@ -1,13 +1,20 @@
 .weekday {
-  background: #f2f2f1;
   border-radius: 5px;
-  margin: 0 7px 0px 0;
-  width: 85px;
-  padding: 20px;
+  border: 2px solid whitesmoke;
   font-weight: lighter;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .weekday:hover {
   background: #100e3b;
   color: white;
+}
+
+.sunsetpanel,
+.moonsetpanel {
+  background: #cadefc;
+  border-radius: 5px;
+
+  padding: 40px;
 }

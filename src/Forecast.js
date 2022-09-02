@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ForecastDay from "./ForecastDay";
+import Sunrise from "./Sunrise";
+import Moonrise from "./Moonrise";
 import "./Forecast.css";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+  let [moonSun, setMoonSun] = useState(null);
 
   useEffect(() => {
     setLoaded(false);
   }, [props.coordinates]);
 
   function GetForecastData(response) {
+    console.log(response.data);
     setForecast(response.data.daily);
+    setMoonSun({
+      moonrise: response.data.daily[0].moonrise,
+      moonset: response.data.daily[0].moonset,
+      sunrise: response.data.daily[0].sunrise,
+      sunset: response.data.daily[0].sunset,
+    });
     setLoaded(true);
   }
   function loadForecast() {
@@ -27,12 +37,12 @@ export default function Forecast(props) {
 
   if (loaded) {
     return (
-      <div className="container forecast">
+      <div className="container container-fluid forecast">
         <div className="row dailyforecast">
           {forecast.map(function (dailyforecast, index) {
             if (index < 8) {
               return (
-                <div className="col-2 weekday" key={index}>
+                <div className="col-sm-3 weekday" key={index}>
                   <ForecastDay data={dailyforecast} />
                 </div>
               );
@@ -40,6 +50,16 @@ export default function Forecast(props) {
               return null;
             }
           })}
+        </div>
+        <div className="row ">
+          <div className="col-sm-6 sunsetpanel">
+            {" "}
+            <Sunrise data={moonSun} />{" "}
+          </div>
+          <div className="col-sm-6 moonsetpanel">
+            {" "}
+            <Moonrise data={moonSun} />{" "}
+          </div>
         </div>
       </div>
     );

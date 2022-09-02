@@ -31,16 +31,6 @@ body {
   padding: 25px 0 25px 0;
 }
 
-.SearchEngine .sunsetpanel,
-.SearchEngine .moonsetpanel {
-  background: #cadefc;
-  border-radius: 5px;
-  color: white;
-  margin: 10px;
-  padding: 40px;
-  width: 380px;
-}
-
 input[type="text"] {
   margin: 10px;
   width: 90%;

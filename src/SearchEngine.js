@@ -18,7 +18,6 @@ export default function SearchEngine(props) {
   }
 
   function GetWeatherData(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -60,7 +59,7 @@ export default function SearchEngine(props) {
     return (
       <div className="SearchEngine">
         <div className="row">
-          <div className="col-8 panel1">
+          <div className="col-sm-8 panel1">
             <h1>
               Weather <strong>Forecast</strong>
             </h1>
@@ -69,13 +68,9 @@ export default function SearchEngine(props) {
             </div>
 
             <Forecast coordinates={weatherData.coordinates} />
-            <div className="row ">
-              <div className="col-6 sunsetpanel"> Sunset data Here </div>
-              <div className="col-6 moonsetpanel"> Moon Data Here </div>
-            </div>
           </div>
 
-          <div className="col-4 panel2">
+          <div className="col-sm-4 panel2">
             <form className="search" onSubmit={handleSubmit}>
               <input
                 type="text"

@@ -7,10 +7,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <div className="container-wrapper container-fluid">
-        <SearchEngine defaultCity="Tokyo" />
-        <Footer />
-      </div>
+      <SearchEngine defaultCity="Tokyo" />
+      <Footer />
     </div>
   );
 }
