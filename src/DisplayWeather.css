@@ -4,6 +4,13 @@
   --box-shadow-rgba: rgba(0, 0, 0, 0.3);
 }
 
+.DisplayWeather {
+  border-radius: 6px;
+  padding: 25px 0 25px 0;
+  background-color: #edebf4;
+  margin: 10px 0 30px 0px;
+}
+
 .icon {
   width: 100px;
   position: relative;

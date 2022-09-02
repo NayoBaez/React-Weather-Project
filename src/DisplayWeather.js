@@ -7,7 +7,7 @@ import "./DisplayWeather.css";
 export default function DisplayWeather(props) {
   return (
     <div>
-      <div container="container-display-weather">
+      <div className="container DisplayWeather">
         <ul>
           <li>
             {" "}

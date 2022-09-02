@@ -63,6 +63,7 @@ export default function SearchEngine(props) {
             <h1>
               Weather <strong>Forecast</strong>
             </h1>
+
             <div className="city-photo">
               <Photos photos={photos} />
             </div>

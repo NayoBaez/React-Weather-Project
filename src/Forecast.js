@@ -37,30 +37,34 @@ export default function Forecast(props) {
 
   if (loaded) {
     return (
-      <div className="container container-fluid forecast">
-        <div className="row dailyforecast">
-          {forecast.map(function (dailyforecast, index) {
-            if (index < 8) {
-              return (
-                <div className="col-sm-3 weekday" key={index}>
-                  <ForecastDay data={dailyforecast} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
-        </div>
-        <div className="row ">
-          <div className="col-sm-6 sunsetpanel">
-            {" "}
-            <Sunrise data={moonSun} />{" "}
+      <div className="Forecast">
+        <section>
+          <div className="row dailyforecast">
+            {forecast.map(function (dailyforecast, index) {
+              if (index < 8) {
+                return (
+                  <div className="col-sm-3 weekday" key={index}>
+                    <ForecastDay data={dailyforecast} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
-          <div className="col-sm-6 moonsetpanel">
-            {" "}
-            <Moonrise data={moonSun} />{" "}
+        </section>
+        <section>
+          <div className="row ">
+            <div className="col-sm-6 sunsetpanel">
+              {" "}
+              <Sunrise data={moonSun} />{" "}
+            </div>
+            <div className="col-sm-6 moonsetpanel">
+              {" "}
+              <Moonrise data={moonSun} />{" "}
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     );
   } else {

@@ -1,12 +1,25 @@
-body {
-  background-color: #f1f0ee;
-  font-family: "Gill Sans", sans-serif;
-}
-
 :root {
   --default-font-family: "Poppins", sans-serif;
   --branding-color: rgba(158, 192, 255);
   --box-shadow-rgba: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: #f1f0ee;
+  font-family: var(--default-font-family);
+}
+
+.SearchEngine {
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.SearchEngine section {
+  background-color: white;
+  margin: 15px 0;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
 .SearchEngine .panel1 {
@@ -15,20 +28,13 @@ body {
 }
 
 .SearchEngine .panel2 {
-  background-color: #f2f2f1;
   padding-top: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .SearchEngine li {
   list-style: none;
-}
-
-.SearchEngine .display-weather,
-.SearchEngine .weather-details {
-  background: #cadefc;
-  border-radius: 6px;
-  margin: 20px;
-  padding: 25px 0 25px 0;
 }
 
 input[type="text"] {
