@@ -42,14 +42,16 @@ export default function FormattedDate() {
 
   return (
     <>
-      <div className="FormattedDate">
-        <h1>
-          {hour}:{minutes} PM
-        </h1>
-        <p>
-          {day}, {month} {date} {year}
-        </p>
-      </div>
+      <section>
+        <div className="FormattedDate">
+          <h1>
+            {hour}:{minutes} PM
+          </h1>
+          <p>
+            {day}, {month} {date} {year}
+          </p>
+        </div>
+      </section>
     </>
   );
 }

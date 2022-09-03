@@ -18,6 +18,7 @@ export default function SearchEngine(props) {
   }
 
   function GetWeatherData(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -75,10 +76,12 @@ export default function SearchEngine(props) {
             <form className="search" onSubmit={handleSubmit}>
               <input
                 type="text"
-                placeholder="Enter Your City"
+                placeholder="         ... Search City"
                 autoFocus="on"
                 onChange={showCity}
               />
+              <i className="fa-solid fa-location-dot"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
             </form>
             <div className="display-weather">
               <DisplayWeather data={weatherData} />

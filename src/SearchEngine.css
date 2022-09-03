@@ -25,11 +25,11 @@ body {
 .SearchEngine .panel1 {
   background-color: white;
   padding-top: 15px;
+  margin-top: 10px;
 }
 
 .SearchEngine .panel2 {
   padding-top: 15px;
-  margin-top: 10px;
   border-radius: 5px;
 }
 
@@ -39,29 +39,31 @@ body {
 
 input[type="text"] {
   margin: 10px;
-  width: 90%;
+  width: 95%;
   padding: 10px 20px;
-  border: thin double;
+  border: 3px solid #edebf4;
   border-radius: 10px;
-  border-color: transparent;
+  background: #edebf4;
 }
 
-input[type="submit"] {
-  background: var(--branding-color);
-  color: white;
-  border: 1px solid var(--branding-color);
-  border-radius: 3px;
-  box-shadow: 2px 2px 4px var(--box-shadow-rgba);
-  font-size: 12px;
-  font-weight: lighter;
-  letter-spacing: 4px;
-  margin: 20px 3px;
-  padding: 12px 10px;
-  transition: all 200ms ease-in-out;
+.fa-location-dot {
+  color: #a2a8d3;
+  padding: 10px;
+  font-size: 30px;
+  position: relative;
+  top: -60px;
+  left: 160px;
 }
 
-input[type="submit"]:hover {
-  background: white;
-  color: var(--branding-color);
-  cursor: pointer;
+.fa-magnifying-glass {
+  color: #a2a8d3;
+  font-size: 30px;
+  position: relative;
+  top: -60px;
+  right: 160px;
+}
+
+::placeholder {
+  opacity: 0.8;
+  color: #a2a8d3;
 }

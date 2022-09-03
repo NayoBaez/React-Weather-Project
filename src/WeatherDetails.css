@@ -1,5 +1,21 @@
 .WeatherDetails {
   border-radius: 6px;
-  padding: 25px 0 25px 0;
-  background-color: #edebf4;
+  border: 1px solid #edebf4;
+  padding: 10px 0 10px 0;
+}
+
+.WeatherDetails .fa-droplet {
+  color: #a2a8d3;
+}
+
+.WeatherDetails .fa-wind {
+  color: #bbe4e9;
+}
+
+.WeatherDetails .fa-temperature-three-quarters {
+  color: #d5f9be;
+}
+
+.WeatherDetails .fa-equals {
+  color: #f4a9a4;
 }

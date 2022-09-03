@@ -53,7 +53,7 @@ export default function Moonrise(props) {
         <div className="col-sm-6">
           {" "}
           <i className="fa-regular fa-moon"></i>
-          <span className="moonsetTime"> {moonset()}</span>
+          <span className="moonsetTime">{moonset()}</span>
         </div>
       </div>
     </div>
