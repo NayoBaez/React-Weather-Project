@@ -8,11 +8,11 @@
   font-weight: bold;
   font-size: 18px;
   margin: -15px 0 35px 0;
-  color: #a2a8d3;
 }
 
 .moonriseTime,
 .moonsetTime {
   font-weight: bold;
   font-size: 20px;
+  color: #a2a8d3;
 }
