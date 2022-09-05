@@ -9,29 +9,28 @@ export default function DisplayWeather(props) {
     <div>
       <section>
         <div className="DisplayWeather">
-          <ul>
-            <li>
-              {" "}
-              <h1>
-                {props.data.city}, {props.data.country}
-              </h1>
-            </li>
-
-            <li>
-              <p className="weather-description text-capitalize">
-                {props.data.description}
-              </p>
-            </li>
-            <li>
-              {" "}
-              <img
-                src={props.data.icon}
-                alt={props.data.description}
-                className="icon"
-              />
-              <DisplayTemperature celsius={props.data.temperature} />
-            </li>
-          </ul>
+          <div>
+            <h1>
+              <i className="fa-solid fa-location-dot"></i> {props.data.city},{" "}
+              {props.data.country}
+            </h1>
+          </div>
+          <div>
+            <p className="weather-description text-capitalize">
+              {props.data.description}
+            </p>
+          </div>
+          <div>
+            <img
+              src={props.data.icon}
+              alt={props.data.description}
+              className="icon"
+            />
+          </div>
+          <div>
+            {" "}
+            <DisplayTemperature celsius={props.data.temperature} />
+          </div>
         </div>
       </section>
     </div>

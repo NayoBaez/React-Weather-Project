@@ -6,16 +6,19 @@
 
 .DisplayWeather {
   border-radius: 6px;
-  padding: 25px 0 25px 0;
-  margin: 10px 0 10px 0px;
+  padding: 10px 0 25px 0;
   border: 1px solid #edebf4;
+}
+
+.fa-location-dot {
+  color: #a2a8d3;
+  padding: 10px;
+  font-size: 50px;
+  position: relative;
 }
 
 .icon {
   width: 100px;
-  position: relative;
-  top: -15px;
-  margin-right: 10px;
 }
 
 .city-name {

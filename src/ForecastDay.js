@@ -52,11 +52,11 @@ export default function ForecastDay(props) {
         </div>
       </div>
       <div className="row">
-        <div className="col-sm-2">
+        <div className="col-sm-1">
           <i className="fa-solid fa-wind"></i>
         </div>
-        <div className="col-sm-2">
-          <span className="wind">{wind()}</span>
+        <div className="col-sm-6">
+          <span className="wind">{wind()} km/h</span>
         </div>
       </div>
 

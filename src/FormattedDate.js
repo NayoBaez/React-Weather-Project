@@ -44,9 +44,9 @@ export default function FormattedDate() {
     <>
       <section>
         <div className="FormattedDate">
-          <h1>
+          <h2>
             {hour}:{minutes} PM
-          </h1>
+          </h2>
           <p>
             {day}, {month} {date} {year}
           </p>

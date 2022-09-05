@@ -24,17 +24,24 @@ body {
 
 .SearchEngine .panel1 {
   background-color: white;
-  padding-top: 15px;
-  margin-top: 10px;
+  margin-top: -20px;
 }
 
 .SearchEngine .panel2 {
-  padding-top: 15px;
   border-radius: 5px;
+  margin-top: -20px;
 }
 
 .SearchEngine li {
   list-style: none;
+}
+
+.SearchEngine h1 {
+  margin-top: 35px;
+}
+
+form {
+  margin-top: 30px;
 }
 
 input[type="text"] {
@@ -46,21 +53,18 @@ input[type="text"] {
   background: #edebf4;
 }
 
-.fa-location-dot {
-  color: #a2a8d3;
-  padding: 10px;
-  font-size: 30px;
-  position: relative;
-  top: -60px;
-  left: 160px;
+input:focus {
+  outline: none !important;
+  border-color: #a2a8d3;
+  box-shadow: 0 0 10px #a2a8d3;
 }
 
 .fa-magnifying-glass {
   color: #a2a8d3;
   font-size: 30px;
   position: relative;
-  top: -60px;
-  right: 160px;
+  top: -50px;
+  left: 130px;
 }
 
 ::placeholder {

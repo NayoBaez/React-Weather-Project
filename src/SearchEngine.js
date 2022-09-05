@@ -4,6 +4,8 @@ import DisplayWeather from "./DisplayWeather";
 import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
+import Moonrise from "./Moonrise";
+import Sunrise from "./Sunrise";
 import Photos from "./Photos";
 
 import "./SearchEngine.css";
@@ -60,11 +62,26 @@ export default function SearchEngine(props) {
     return (
       <div className="SearchEngine">
         <div className="row">
-          <div className="col-sm-8 panel1">
+          <div className="col-sm-8">
             <h1>
               Weather <strong>Forecast</strong>
             </h1>
-
+          </div>
+          <div className="col-sm-4">
+            {" "}
+            <form className="search" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="         ... Search City"
+                autoFocus="on"
+                onChange={showCity}
+              />
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </form>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-8 panel1">
             <div className="city-photo">
               <Photos photos={photos} />
             </div>
@@ -73,16 +90,6 @@ export default function SearchEngine(props) {
           </div>
 
           <div className="col-sm-4 panel2">
-            <form className="search" onSubmit={handleSubmit}>
-              <input
-                type="text"
-                placeholder="         ... Search City"
-                autoFocus="on"
-                onChange={showCity}
-              />
-              <i className="fa-solid fa-location-dot"></i>
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </form>
             <div className="display-weather">
               <DisplayWeather data={weatherData} />
             </div>
