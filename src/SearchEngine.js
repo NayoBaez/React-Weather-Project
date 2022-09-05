@@ -4,8 +4,6 @@ import DisplayWeather from "./DisplayWeather";
 import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
-import Moonrise from "./Moonrise";
-import Sunrise from "./Sunrise";
 import Photos from "./Photos";
 
 import "./SearchEngine.css";
