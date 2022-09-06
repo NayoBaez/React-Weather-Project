@@ -35,6 +35,8 @@ export default function FormattedDate() {
   if (hour < 10) {
     hour = `0${hour}`;
   }
+  let prepend = hour >= 12 ? "PM" : "AM";
+
   let minutes = currentDate.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -45,7 +47,7 @@ export default function FormattedDate() {
       <section>
         <div className="FormattedDate">
           <h2>
-            {hour}:{minutes} PM
+            {hour}:{minutes} {prepend}
           </h2>
           <p>
             {day}, {month} {date} {year}
