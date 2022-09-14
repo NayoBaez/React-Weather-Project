@@ -23,6 +23,8 @@ export default function SearchEngine(props) {
       ready: true,
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
+      maxtemp: response.data.main.temp_max,
+      mintemp: response.data.main.temp_min,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       feels: response.data.main.feels_like,
@@ -58,7 +60,7 @@ export default function SearchEngine(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="SearchEngine">
+      <div className="container SearchEngine">
         <div className="row">
           <div className="col-sm-8">
             <h1>
@@ -79,25 +81,20 @@ export default function SearchEngine(props) {
           </div>
         </div>
         <div className="row">
-          <div className="col-sm-8 panel1">
-            <div className="city-photo">
-              <Photos photos={photos} />
-            </div>
-
+          <div className="col-sm-8">
+            <Photos photos={photos} />
+          </div>
+          <div className="col-sm-4">
+            <DisplayWeather data={weatherData} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-8">
             <Forecast coordinates={weatherData.coordinates} />
           </div>
-
-          <div className="col-sm-4 panel2">
-            <div className="display-weather">
-              <DisplayWeather data={weatherData} />
-            </div>
-
-            <div className="weather-details">
-              <WeatherDetails data={weatherData} />
-            </div>
-            <div className="weather-details">
-              <FormattedDate />
-            </div>
+          <div className="col-sm-4">
+            <WeatherDetails data={weatherData} />
+            <FormattedDate />
           </div>
         </div>
       </div>

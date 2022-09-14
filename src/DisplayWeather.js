@@ -6,33 +6,41 @@ import "./DisplayWeather.css";
 
 export default function DisplayWeather(props) {
   return (
-    <div>
-      <section>
-        <div className="DisplayWeather">
-          <div>
-            <h1>
-              <i className="fa-solid fa-location-dot"></i> {props.data.city},{" "}
-              {props.data.country}
-            </h1>
+    <section>
+      <div className="DisplayWeather">
+        <div className="row">
+          <div className="col-4">
+            <i className="fa-solid fa-location-dot"></i>
           </div>
-          <div>
-            <p className="weather-description text-capitalize">
-              {props.data.description}
-            </p>
+          <div className="col-8">
+            <h4>
+              {props.data.city}, {props.data.country}
+            </h4>
+            <p className="text-capitalize">{props.data.description}</p>
           </div>
-          <div>
+        </div>
+
+        <div className="row">
+          <div className="col-6">
+            {" "}
+            <DisplayTemperature celsius={props.data.temperature} />
+          </div>
+          <div className="col-6">
             <img
               src={props.data.icon}
               alt={props.data.description}
               className="icon"
             />
           </div>
-          <div>
-            {" "}
-            <DisplayTemperature celsius={props.data.temperature} />
-          </div>
+          <ul>
+            <li>
+              Fahrenheit: {Math.round(props.data.temperature * 9) / 5 + 32}
+            </li>
+            <li>Max Temp: {Math.round(props.data.maxtemp)}</li>
+            <li>Min Temp: {Math.round(props.data.mintemp)}</li>
+          </ul>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

@@ -61,7 +61,7 @@ export default function ForecastDay(props) {
       </div>
 
       <div className="row">
-        <div className="col-sm-2">
+        <div className="col-md-2">
           <i className="fa-solid fa-droplet"></i>
         </div>
         <div className="col-sm-2">
