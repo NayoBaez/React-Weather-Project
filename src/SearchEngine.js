@@ -5,6 +5,7 @@ import WeatherDetails from "./WeatherDetails";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
 import Photos from "./Photos";
+import Maps from "./Maps";
 
 import "./SearchEngine.css";
 
@@ -95,6 +96,7 @@ export default function SearchEngine(props) {
           <div className="col-sm-4">
             <WeatherDetails data={weatherData} />
             <FormattedDate />
+            <Maps coordinates={weatherData.coordinates} />
           </div>
         </div>
       </div>
