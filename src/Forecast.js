@@ -15,7 +15,6 @@ export default function Forecast(props) {
   }, [props.coordinates]);
 
   function GetForecastData(response) {
-    console.log(response.data);
     setForecast(response.data.daily);
     setMoonSun({
       moonrise: response.data.daily[0].moonrise,

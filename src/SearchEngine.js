@@ -19,7 +19,6 @@ export default function SearchEngine(props) {
   }
 
   function GetWeatherData(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,

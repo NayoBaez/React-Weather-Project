@@ -19,4 +19,5 @@ body {
   border-radius: 10px;
   box-shadow: 5px 5px 10px var(--box-shadow-rgba);
   background: white;
+  padding-top: 30px;
 }
