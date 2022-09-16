@@ -1,5 +1,11 @@
 .FormattedDate {
   border-radius: 6px;
   padding: 19px 0 10px 0;
-  background-color: #edebf4;
+  background: #a2a8d3;
+  color: white;
+}
+
+.FormattedDate:hover {
+  background: #edebf4;
+  color: #a2a8d3;
 }

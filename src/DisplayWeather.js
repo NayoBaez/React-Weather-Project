@@ -8,37 +8,37 @@ export default function DisplayWeather(props) {
   return (
     <section>
       <div className="DisplayWeather">
-        <div className="row">
-          <div className="col-4">
-            <i className="fa-solid fa-location-dot"></i>
-          </div>
-          <div className="col-8">
-            <h4>
+        <div>
+          <div>
+            <h4 className="city-name">
               {props.data.city}, {props.data.country}
             </h4>
             <p className="text-capitalize">{props.data.description}</p>
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-6">
-            {" "}
+        <div>
+          <div className="temperaturedisplay">
             <DisplayTemperature celsius={props.data.temperature} />
-          </div>
-          <div className="col-6">
             <img
               src={props.data.icon}
               alt={props.data.description}
               className="icon"
             />
           </div>
-          <ul>
-            <li>
-              Fahrenheit: {Math.round(props.data.temperature * 9) / 5 + 32}
-            </li>
-            <li>Max Temp: {Math.round(props.data.maxtemp)}</li>
-            <li>Min Temp: {Math.round(props.data.mintemp)}</li>
-          </ul>
+
+          <span className="details">
+            {" "}
+            Max: {Math.round(props.data.maxtemp)}
+          </span>
+          <span className="details">
+            {" "}
+            Min: {Math.round(props.data.mintemp)}
+          </span>
+          <span className="details">
+            {" "}
+            {Math.round(props.data.temperature * 9) / 5 + 32} °F
+          </span>
         </div>
       </div>
     </section>

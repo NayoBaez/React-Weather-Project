@@ -50,7 +50,7 @@ export default function FormattedDate() {
             {hour}:{minutes} {prepend}
           </h2>
           <p>
-            {day}, {month} {date} {year}
+            {day}, {date} {month} {year}
           </p>
         </div>
       </section>

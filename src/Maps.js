@@ -18,7 +18,7 @@ export default function Maps(props) {
             setViewport(newView);
           }}
           style={{ width: 315, height: 165 }}
-          mapStyle="mapbox://styles/mapbox/streets-v9"
+          mapStyle="mapbox://styles/nayobaez/cl850n2k6002n14qkpfch5def"
         />
       </div>
     </section>
