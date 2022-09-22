@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ReactMapGL from "react-map-gl";
+import ReactMapGL, {
+  FullscreenControl,
+  NavigationControl,
+  Marker,
+} from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function Maps(props) {
@@ -7,7 +11,7 @@ export default function Maps(props) {
   let [viewport, setViewport] = useState({
     latitude: props.coordinates.lat,
     longitude: props.coordinates.lon,
-    zoom: 10,
+    zoom: 7,
   });
 
   useEffect(() => {
@@ -15,7 +19,7 @@ export default function Maps(props) {
     setViewport({
       latitude: props.coordinates.lat,
       longitude: props.coordinates.lon,
-      zoom: 10,
+      zoom: 7,
     });
   }, [props.coordinates]);
 
@@ -33,7 +37,16 @@ export default function Maps(props) {
             mapStyle="mapbox://styles/nayobaez/cl850n2k6002n14qkpfch5def"
             onMove={(evt) => setViewport(evt.viewport)}
             {...viewport}
-          />
+          >
+            {" "}
+            <FullscreenControl />
+            <NavigationControl position="bottom-left" />
+            <Marker
+              longitude={props.coordinates.lon}
+              latitude={props.coordinates.lat}
+              color="#a2a8d3"
+            />
+          </ReactMapGL>
         </div>
       </section>
     );
