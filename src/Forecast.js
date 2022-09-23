@@ -43,8 +43,10 @@ export default function Forecast(props) {
               {forecast.map(function (dailyforecast, index) {
                 if (index < 8) {
                   return (
-                    <div className="col-sm-3 dailyforecast" key={index}>
-                      <ForecastDay data={dailyforecast} />
+                    <div className="col-sm-3 g-0" key={index}>
+                      <div className="dailyforecast">
+                        <ForecastDay data={dailyforecast} />
+                      </div>
                     </div>
                   );
                 } else {
@@ -57,13 +59,15 @@ export default function Forecast(props) {
 
         <section>
           <div className="row ">
-            <div className="col-sm-6 sunsetpanel">
-              {" "}
-              <Sunrise data={moonSun} />{" "}
+            <div className="col-sm-6">
+              <div className="sunsetpanel">
+                <Sunrise data={moonSun} />
+              </div>
             </div>
-            <div className="col-sm-6 moonsetpanel">
-              {" "}
-              <Moonrise data={moonSun} />{" "}
+            <div className="col-sm-6">
+              <div className="moonsetpanel">
+                <Moonrise data={moonSun} />
+              </div>
             </div>
           </div>
         </section>

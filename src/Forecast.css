@@ -1,9 +1,8 @@
 .dailyforecast {
   border-radius: 5px;
   border: 2px solid #edebf4;
-  font-weight: lighter;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 5px;
 }
 
 .dailyforecast:hover {
@@ -13,7 +12,11 @@
 .sunsetpanel,
 .moonsetpanel {
   border-radius: 5px;
-
   border: 2px solid #edebf4;
   padding: 40px;
+}
+
+.sunsetpanel:hover,
+.moonsetpanel:hover {
+  border: 1px solid #a2a8d3;
 }
