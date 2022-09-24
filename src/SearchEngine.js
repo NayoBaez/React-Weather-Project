@@ -46,13 +46,12 @@ export default function SearchEngine(props) {
   }
 
   function search() {
-    let apiKey = "bc62018103de1e194675d5c344746370";
+    let apiKey = `${process.env.REACT_APP_OPENWEATHER_TOKEN}`;
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(GetWeatherData);
 
-    let pexelsApiKey =
-      "563492ad6f91700001000001f2ddcd4d8c2040a1a5a92d54eeab8675";
+    let pexelsApiKey = `${process.env.REACT_APP_PEXELS_TOKEN}`;
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${city}&per_page=1`;
     let header = { Authorization: `Bearer ${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: header }).then(handlePexelsResponse);
