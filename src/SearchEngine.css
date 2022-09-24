@@ -65,6 +65,6 @@ input:focus {
     flex-flow: column-reverse;
   }
   .SearchEngine .top-row {
-    height: 120px;
+    height: 125px;
   }
 }
