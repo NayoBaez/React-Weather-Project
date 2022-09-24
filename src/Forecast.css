@@ -20,3 +20,10 @@
 .moonsetpanel:hover {
   border: 1px solid #a2a8d3;
 }
+
+@media (max-width: 576px) {
+  .daysforecast {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

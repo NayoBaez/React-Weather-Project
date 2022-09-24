@@ -25,7 +25,7 @@ export default function Forecast(props) {
     setLoaded(true);
   }
   function loadForecast() {
-    let apiKey = "bc62018103de1e194675d5c344746370";
+    let apiKey = `${process.env.REACT_APP_OPENWEATHER_TOKEN}`;
     let units = "metric";
     let latitude = props.coordinates.lat;
     let longitude = props.coordinates.lon;
@@ -58,7 +58,7 @@ export default function Forecast(props) {
         </section>
 
         <section>
-          <div className="row ">
+          <div className="row">
             <div className="col-sm-6">
               <div className="sunsetpanel">
                 <Sunrise data={moonSun} />

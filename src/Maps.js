@@ -32,7 +32,7 @@ export default function Maps(props) {
       <section>
         <div className="Maps">
           <ReactMapGL
-            mapboxAccessToken="pk.eyJ1IjoibmF5b2JhZXoiLCJhIjoiY2w4NHVxNHNoMDNoYzNvbHQ1MXE5cnd0ciJ9.grPjQHHspWWfEOx3aZWIRg"
+            mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
             style={{ width: 315, height: 165 }}
             mapStyle="mapbox://styles/nayobaez/cl850n2k6002n14qkpfch5def"
             onMove={(evt) => setViewport(evt.viewport)}

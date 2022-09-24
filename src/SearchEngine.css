@@ -9,6 +9,10 @@ body {
   font-family: var(--default-font-family);
 }
 
+.SearchEngine .top-row {
+  height: 90px;
+}
+
 .SearchEngine section {
   background-color: white;
   margin: 15px 0;
@@ -32,6 +36,8 @@ input[type="text"] {
   border: 3px solid #edebf4;
   border-radius: 10px;
   background: #edebf4;
+  color: #a2a8d3;
+  font-weight: bolder;
 }
 
 input:focus {
@@ -45,10 +51,20 @@ input:focus {
   font-size: 30px;
   position: relative;
   top: -50px;
-  left: 130px;
+  left: 150px;
 }
 
 ::placeholder {
   opacity: 0.8;
   color: #a2a8d3;
+}
+
+@media (max-width: 576px) {
+  .last-row {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .SearchEngine .top-row {
+    height: 120px;
+  }
 }
