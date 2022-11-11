@@ -1,3 +1,4 @@
+[![MasterHead](https://raw.githubusercontent.com/NayoBaez/React-Weather-Project/master/GITHUB%20README%20BANNER%20-%20WEATHER-REACT.png)](https://nayobaez.com)
 
 # WEATHER DASHBOARD 
 
