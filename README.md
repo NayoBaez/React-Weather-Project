@@ -3,6 +3,9 @@
 # WEATHER DASHBOARD 
 
 NOT your average weather app! Featuring a Search Engine, Weekly Forecast, Sun - Moonrise times, input city imagery and a map rendering it’s location. Utilizing React, JSX, CSS, Bootstrap, Axios and multiple API integrations: Pexels / Openweather / Mapbox, this project is the most advanced I have created to date. It required more knowledge than I gained studying over the past year, pushing me to read a lot of documentation to solve complex errors on my own.
+
+<img align="right" alt="weather-dashboard" width="350" src="http://nayobaez.com/images/React-Weather.png"></img>
+
 ## Tech Stack
 
 Built with JSX, CSS, Bootstrap, React, Axios & Openweather + Pexels + Mapbox API Integrations
