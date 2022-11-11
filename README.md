@@ -8,7 +8,8 @@ NOT your average weather app! Featuring a Search Engine, Weekly Forecast, Sun - 
 
 ## Tech Stack
 
-Built with JSX, CSS, Bootstrap, React, Axios & Openweather + Pexels + Mapbox API Integrations
+Built with JSX, CSS, Bootstrap, React, Axios & <br>
+Openweather + Pexels + Mapbox API Integrations
 
 
 
