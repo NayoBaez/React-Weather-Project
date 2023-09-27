@@ -52,7 +52,7 @@ export default function SearchEngine(props) {
     axios.get(apiUrl).then(GetWeatherData);
 
     const imagesApiKey = `${process.env.REACT_APP_IMAGES_TOKEN}`;
-    let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${city}&key=${imagesApiKey}per_page=1`;
+    let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${city}&key=${imagesApiKey}&per_page=1`;
     axios.get(imagesApiUrl).then(handleImagesResponse);
   }
 
