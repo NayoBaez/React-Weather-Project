@@ -14,7 +14,7 @@ export default function SearchEngine(props) {
   const [city, setCity] = useState(props.defaultCity);
   let [photos, setPhotos] = useState(null);
 
-  function handlePexelsResponse(response) {
+  function handleImagesResponse(response) {
     setPhotos(response.data.photos);
   }
 
@@ -51,10 +51,9 @@ export default function SearchEngine(props) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(GetWeatherData);
 
-    let pexelsApiKey = `${process.env.REACT_APP_PEXELS_TOKEN}`;
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${city}&per_page=1`;
-    let header = { Authorization: `Bearer ${pexelsApiKey}` };
-    axios.get(pexelsApiUrl, { headers: header }).then(handlePexelsResponse);
+    const imagesApiKey = `${process.env.REACT_APP_IMAGES_TOKEN}`;
+    let imagesApiUrl = `https://api.shecodes.io/images/v1/search?query=${city}&key=${imagesApiKey}per_page=1`;
+    axios.get(imagesApiUrl).then(handleImagesResponse);
   }
 
   if (weatherData.ready) {
