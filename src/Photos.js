@@ -6,23 +6,17 @@ export default function Photos(props) {
     return (
       <section>
         <div className="Photos">
-          {props.photos.map(function (photo, index) {
-            return (
-              <div key={index}>
-                <a
-                  href={photo.src.original}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    alt={photo.alt}
-                    src={photo.src.landscape}
-                    className="img-fluid"
-                  />
-                </a>
-              </div>
-            );
-          })}
+          <a
+            href={props.photos[1].src.original}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt={props.photos[1].alt}
+              src={props.photos[1].src.landscape}
+              className="img-fluid"
+            />
+          </a>
         </div>
       </section>
     );
